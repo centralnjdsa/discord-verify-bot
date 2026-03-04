@@ -2,7 +2,7 @@
 
 The Central NJ DSA verification bot uses https://proof.dsausa.org to verify that a member's email is associated with a DSA membership. It is based on the Discord awwbot example app, and it is hosted on Cloudflare workers. 
 
-The tutorial for building awwbot is [in the Discord developer documentation](https://discord.com/developers/docs/tutorials/hosting-on-cloudflare-workers). The following README is based on the README for the Discord awwbot, which can be found [here](https://github.com/discord/cloudflare-example-app).
+The tutorial for building awwbot is [in the Discord developer documentation](https://discord.com/developers/docs/tutorials/hosting-on-cloudflare-workers). The following README is based on the README for the Discord awwbot, which can be found [here](https://github.com/discord/cloudflare-sample-app).
 
 ## Resources used
 
