@@ -2,6 +2,3 @@ node_modules
 coverage
 .dev.vars
 .wrangler
-.prettierignore
-.prettierrc.json
-eslint.config.js

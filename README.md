@@ -1,16 +1,13 @@
-# Cloudflare worker example app
+# Discord Verify Bot
 
-awwbot is an example app that brings the cuteness of `r/aww` straight to your Discord server, hosted on Cloudflare workers. Cloudflare Workers are a convenient way to host Discord bots due to the free tier, simple development model, and automatically managed environment (no VMs!).
+The Central NJ DSA verification bot uses https://proof.dsausa.org to verify that a member's email is associated with a DSA membership. It is based on the Discord awwbot example app, and it is hosted on Cloudflare workers. 
 
-The tutorial for building awwbot is [in the developer documentation](https://discord.com/developers/docs/tutorials/hosting-on-cloudflare-workers)
-
-![awwbot in action](https://user-images.githubusercontent.com/534619/157503404-a6c79d1b-f0d0-40c2-93cb-164f9df7c138.gif)
+The tutorial for building awwbot is [in the Discord developer documentation](https://discord.com/developers/docs/tutorials/hosting-on-cloudflare-workers). The following README is based on the README for the Discord awwbot, which can be found [here](https://github.com/discord/cloudflare-example-app).
 
 ## Resources used
 
 - [Discord Interactions API](https://discord.com/developers/docs/interactions/receiving-and-responding)
 - [Cloudflare Workers](https://workers.cloudflare.com/) for hosting
-- [Reddit API](https://www.reddit.com/dev/api/) to send messages back to the user
 
 ---
 
@@ -21,12 +18,10 @@ Below is a basic overview of the project structure:
 ```
 ├── .github/workflows/ci.yaml -> Github Action configuration
 ├── src
+│   ├── cf-email.js           -> Reads email from verification mailbox
 │   ├── commands.js           -> JSON payloads for commands
-│   ├── reddit.js             -> Interactions with the Reddit API
 │   ├── register.js           -> Sets up commands with the Discord API
 │   ├── server.js             -> Discord app logic and routing
-├── test
-|   ├── test.js               -> Tests for app
 ├── wrangler.toml             -> Configuration for Cloudflare workers
 ├── package.json
 ├── README.md
@@ -57,13 +52,13 @@ Next, you'll need to create a Cloudflare Worker.
 First clone the project:
 
 ```
-git clone https://github.com/discord/cloudflare-sample-app.git
+git clone https://github.com/centralnjdsa/discord-verify-bot.git
 ```
 
 Then navigate to its directory and install dependencies:
 
 ```
-cd cloudflare-sample-app
+cd discord-verify-bot
 npm install
 ```
 
@@ -142,5 +137,4 @@ $ wrangler secret put DISCORD_APPLICATION_ID
 
 ## Questions?
 
-Feel free to post an issue here, or reach out to [@justinbeckwith](https://twitter.com/JustinBeckwith)!
-# Discord Verify Bot
+Feel free to post an issue here, or reach out to us at [centralnj@dsanj.org](mailto:centralnj@dsanj.org)!
