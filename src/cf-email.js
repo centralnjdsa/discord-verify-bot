@@ -41,7 +41,7 @@ export async function verifyEmail(emailPass, memberAddress) {
         lastLine.startsWith(`${tag} NO`) ||
         lastLine.startsWith(`${tag} BAD`)
       ) {
-        break; // TERMINATE IMMEDIATELY
+        break;
       }
     }
 
